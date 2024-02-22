@@ -1,4 +1,4 @@
-package hei.school.sarisary.endpoint.rest.controller;
+package hei.school.sarisary.endpoint.rest.controller.health;
 
 import hei.school.sarisary.service.SaryService;
 import java.io.IOException;
@@ -14,7 +14,7 @@ public class SaryController {
     this.saryService = saryService;
   }
 
-  @PutMapping(name = "/{id}", produces = MediaType.IMAGE_PNG_VALUE)
+  @PutMapping(value = "/{id}", produces = MediaType.IMAGE_PNG_VALUE)
   public byte[] convertToBlackAndWhite(@PathVariable String id, @RequestBody byte[] sary) {
     try {
       if (sary == null) {
